@@ -4,6 +4,8 @@ class tamagochi {
     this.fullness = 0;
     this.feeded = false;
     this.remaindingFood = 0;
+    this.happiness = 0;
+    this.tiredness = 0;
   }
 
   feed(quantity) {
@@ -15,10 +17,14 @@ class tamagochi {
       this.hungry = 0;
     }
 
-
     if (this.hungry === 0) {
       this.feeded = true;
     }
+  }
+
+  play(quantity) {
+    this.happiness = Math.min(this.happiness + quantity, 100);
+    this.tiredness = Math.min(this.tiredness + quantity, 100);
   }
 }
 

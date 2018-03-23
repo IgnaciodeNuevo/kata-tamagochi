@@ -2,7 +2,7 @@ require('should');
 const tamagochi = require('./tamagochi.js');
 
 
-describe("tamagochi", () => {
+describe("tamagochi feeding", () => {
   it("can have hunger", () => {
     const t = new tamagochi();
     should.exist(t.hungry);
@@ -38,3 +38,11 @@ describe("tamagochi", () => {
 
 });
 
+describe("tamagochi playing", () => {
+  it("can play", () => {
+    const t = new tamagochi();
+    t.play(120);
+    t.happiness.should.equal(100);
+    t.tiredness.should.equal(100);
+  });
+});
