@@ -29,7 +29,12 @@ describe("tamagochi", () => {
     t.feeded.should.equal(true);
   });
 
-
+  it("can't be feeded if it's full", () => {
+    const t = new tamagochi();
+    t.feed(101);
+    t.hungry.should.equal(0);
+    t.remaindingFood.should.equal(1);
+  });
 
 });
 
