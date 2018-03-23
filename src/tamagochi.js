@@ -8,6 +8,9 @@ class tamagochi {
   feed(quantity) {
     this.hungry = this.hungry - quantity;
     this.fullness = this.fullness + quantity;
+    if (this.hungry === 0) {
+      this.feeded = true;
+    }
   }
 }
 
