@@ -1,7 +1,11 @@
 class tamagochi {
 
   constructor() {
-    this.hungry = 0;
+    this.hungry = 100;
+  }
+
+  feed(quantity) {
+    this.hungry = 50;
   }
 
 }
