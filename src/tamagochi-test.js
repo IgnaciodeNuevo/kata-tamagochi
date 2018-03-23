@@ -19,5 +19,14 @@ describe("tamagochi", () => {
     t.feed(50);
     t.fullness.should.equal(50);
   });
+
+  it("can be totally feeded", () => {
+    const t = new tamagochi();
+    t.feed(100);
+    t.fullness.should.equal(100);
+    t.hungry.should.equal(0);
+    t.feeded = true;
+  });
+
 });
 
